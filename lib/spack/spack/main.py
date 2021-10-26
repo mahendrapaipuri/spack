@@ -806,7 +806,7 @@ def _main(argv=None):
         try:
             env = spack.cmd.find_environment(args)
             if env:
-                ev.activate(env, args.use_env_repo, add_view=False)
+                ev.activate(env, args.use_env_repo)
         except spack.config.ConfigFormatError as e:
             # print the context but delay this exception so that commands like
             # `spack config edit` can still work with a bad environment.
