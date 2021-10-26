@@ -57,6 +57,8 @@ fish "$QA_DIR/setup-env-test.fish"
 csh  "$QA_DIR/setup-env-test.csh"
 tcsh "$QA_DIR/setup-env-test.csh"
 
+bash "$QA_DIR/test-env-cfg.sh"
+
 # Delete the symlink going from ./lib/spack/docs/_spack_root back to
 # the initial directory, since it causes ELOOP errors with codecov/actions@2
 if [[ "$COVERAGE" == "true" ]]; then
