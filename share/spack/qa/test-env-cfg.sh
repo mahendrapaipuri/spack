@@ -10,6 +10,11 @@
 # even when the configuration is not valid.
 #
 
+# Source setup-env.sh before tests
+export QA_DIR=$(dirname "$0")
+export SHARE_DIR=$(cd "$QA_DIR/.." && pwd)
+. "$SHARE_DIR/setup-env.sh"
+
 env_cfg=""
 
 function cleanup {
